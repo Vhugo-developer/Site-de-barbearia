@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=playfair+display:wgt@400;700;800$display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&display=swap');
 
 * {
     margin: 0;
@@ -6,8 +7,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 .conteudo_esq {
-   
     padding: 5%;
     height: 70%;
     width: 100%;
@@ -22,27 +27,23 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 900;
     color: white;
-    line-height: 1.2;
-    font-size: clamp(28px, 3.5, 50px);
+    font-size: clamp(28px, 3.5vw, 50px);
     line-height: 1.7;
 }
 
-.terceira_linha{
-    font-family: ;
+.terceira_linha {
     font-weight: 900;
     color: transparent;
     -webkit-text-stroke: 1px white;
-    line-height: 1.2;
-    font-size: clamp(28px, 3.5, 50px);
+    font-size: clamp(28px, 3.5vw, 50px);
     text-align: center;
     line-height: 1.7;
-
 }
 
 .introducao {
     color: white;
     font-size: clamp(13px, 1vw, 17px);
-    padding: 15px 20px ;
+    padding: 15px 20px;
     text-align: center;
     line-height: 1.2;
     text-shadow: 2px 2px 2px black;
@@ -66,13 +67,10 @@
     text-shadow: 2px 2px 2px black;
 }
 
-
-.botoes_res{
+.botoes_res {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
 }
 
 .subtitulo {
@@ -81,7 +79,6 @@
     text-align: center;
     letter-spacing: 2px;
     text-shadow: 2px 2px 2px black;
-
 }
 
 .NOME {
@@ -101,21 +98,18 @@
     display: flex;
     align-items: center;
     position: relative;
-    
 }
 
-.painel_dir{
+.painel_dir {
     background-image: url("../img/barbearia.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     right: 0;
     height: 100vh;
     width: 50vw;
     position: absolute;
     top: 0;
-    
-    
 }
 
 .painel_dir::before {
@@ -137,28 +131,23 @@
     transform: translateX(-50%);
     display: flex;
     align-items: center;
-    
     font-size: clamp(15px, 2vw, 20px);
-    
 }
 
-.menu_topo{
+.menu_topo {
     display: flex;
     align-items: center;
     margin: 0 auto;
     gap: clamp(10px, 1.5vw, 30px);
-    
 }
 
 .menu_topo a {
     color: gray;
     text-decoration: none;
     text-shadow: 2px 2px 2px black;
-
-
 }
 
-.agende{
+.agende {
     color: gray;
     border: 2px solid gray;
     padding: 8px 15px;
@@ -168,13 +157,16 @@
     text-decoration: none;
     text-shadow: 2px 2px 2px black;
     margin-left: 10px;
-    
 }
 
+/* RESPONSIVIDADE */
+
 @media (max-width: 768px) {
+
     .painel_esq {
         width: 100%;
         height: 100vh;
+        min-height: 100vh;
         background: transparent;
         z-index: 1;
     }
@@ -185,17 +177,56 @@
         right: 0;
         width: 100%;
         height: 100vh;
-        
+        min-height: 100vh;
     }
-}
 
-@media (max-width: 768px) {
     .conteudo_esq {
+        width: 100%;
+        height: 70%;
+        padding: 5%;
         gap: 15px;
     }
-    .frase_efeito{
+
+    .frase_efeito {
         font-size: clamp(24px, 5vw, 36px);
+        line-height: 1.4;
+        text-align: center;
     }
 
+    .terceira_linha {
+        font-size: clamp(24px, 5vw, 36px);
+        line-height: 1.4;
+    }
 
-}    
+    .topo {
+        width: 92%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .menu_topo {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 5px 0 0;
+        gap: 12px;
+    }
+
+    .agende {
+        margin-left: 0;
+        padding: 7px 10px;
+        font-size: 14px;
+    }
+
+    .botoes_res {
+        gap: 8px;
+    }
+
+    .reserva,
+    .explore {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
