@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=playfair+display:wgt@400;700;800$display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conteudo_esq {
+    height: 100vh;
+    width: 50vw;
+    background-color: black;
+}
+
+.frase_efeito {
+    font-family: 'playfair Display', serif ;
+    color: white;
+    font-size: 40px;
+
+}
+
+.introducao {
+    color: gray;
+    font-size: 10px;
+    height: 50px;
+
+}
+
+.reserva {
+    padding: 10px 20px;
+    background-color: tan;
+    color: black;
+
+
+}
+
+.explore {
+    color: rgb(255, 254, 254);
+    background-color: black;
+
+}
+
+.subtitulo {
+    color: tan;
+
+
+}
+
+.NOME {
+    color: white;
+    font-size: 20px;
+    background-color: black;
+    background-size: 100vw;
+}
+
+.painel_esq {
+    height: 100vh;
+    width: 50vw;
+    background-color: black;
+
+
+}
